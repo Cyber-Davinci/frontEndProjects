@@ -38,55 +38,46 @@ let quotes = {
 //get the button, left and right arrows
 const generateQuoteBtn = document.querySelector("#generate-quote"),
       nextQuote = document.querySelector(".fa-angles-right"),
-      prevQuote = document.querySelector(".fa-angles-left")
+      prevQuote = document.querySelector(".fa-angles-left");
 
+let quoteAuthor = document.querySelector("#quote-author"),
+    quoteText =  document.querySelector("#quote-text");
 
-let index = 0;
 //get all the keys from the quotes dictionary and store in quoteAuthors as arrray
 let quoteAuthors = Object.keys(quotes);
-let quoteAuthor;
+let quote_author = quoteAuthors[Math.floor(Math.random() * quoteAuthors.length)];
 
-// this function generates random quotes and display on the DOM
-const getQuote = () =>{
-     quoteAuthor = quoteAuthors[Math.floor(Math.random() * quoteAuthors.length)]
-
-    document.querySelector("#quote-text").textContent = quotes[quoteAuthor]
-    document.querySelector("#quote-author").textContent = quoteAuthor;
-}
+quoteText.textContent = quotes[quote_author]
+quoteAuthor.textContent = quote_author;
 
 
-// get next quote from the right
-const getNextQuote = () =>{
-   if(quoteAuthors[index] != undefined){
-       quoteAuthor = quoteAuthors[index++]
-       console.log(quoteAuthor, index)
-   }
-   else{
-       index = 0
-   }
+const getQuote = (index) =>{
 
-   document.querySelector("#quote-text").textContent = quotes[quoteAuthor]
-   document.querySelector("#quote-author").textContent = quoteAuthor
+    generateQuoteBtn.addEventListener("click", () =>{
+        quoteAuthor = quoteAuthors[Math.floor(Math.random() * quoteAuthors.length)]
 
-}
+        quoteText.textContent = quotes[quoteAuthor]
+        quoteAuthor.textContent = quoteAuthor;
+    })
 
-// get next quote from the right
-const getPrevQuote = () =>{
-   if(quoteAuthors[index] != undefined){
-       quoteAuthor = quoteAuthors[index--]
-       console.log(quoteAuthor, index)
-   }
-   else{
-       index = 0
-   }
+    nextQuote.addEventListener("click", () =>{
+        quoteAuthors[index] ? quoteAuthor = quoteAuthors[index++] : index = 0;
+        console.log(quoteAuthor,index)
+        quoteText.textContent = quotes[quoteAuthor]
+        quoteAuthor.textContent = quoteAuthor;
+    })
 
-   document.querySelector("#quote-text").textContent = quotes[quoteAuthor]
-   document.querySelector("#quote-author").textContent = quoteAuthor
+    prevQuote.addEventListener("click", () =>{
+        console.log(index)
+        quoteAuthors[index] ? quoteAuthor = quoteAuthors[index--] : index = quoteAuthors.length -1;
+
+        quoteText.textContent = quotes[quoteAuthor]
+        quoteAuthor.textContent = quoteAuthor;
+
+        console.log(quoteAuthor,index)
+    })
+
 
 }
 
-
-// just calling the functions
-generateQuoteBtn.addEventListener("click", getQuote);
-nextQuote.addEventListener("click", getNextQuote)
-prevQuote.addEventListener("click", getPrevQuote)
+getQuote(0)
