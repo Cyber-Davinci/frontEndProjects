@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="shortcut icon" type="image/png" href="quote.png" />
+    <link rel="stylesheet" href="style.css">
+    <title>Cyber Davinci | Calculator</title>
+</head>
+<body>
+    
+    <div class="container" id="container">
+        <span><i class="fa-solid fa-toggle-off" onclick="changeTheme()"></i></span>
+        <div class="calculator" id="calculator">
+            <div class="input-result">
+            <input id="expression" type="text" autofocus>
+            <h2 class="result" id="result">12,545</h2>
+        </div>
+        <div class="cal-btns">
+            <button class="btn sign" id="btn">e</button>
+            <button class="btn sign" id="btn" onclick="tapped_btn(3.142)">pi</button>
+            <button class="btn sign" id="btn">sin</button>
+            <button class="btn sign" id="btn">deg</button>
+
+            <button class="btn c" id="btn" onclick="erase_btn()">C</button>
+            <button class="btn" id="btn" onclick="tapped_btn('(')">(</button>
+            <button class="btn" id="btn" onclick="tapped_btn(')')">)</button>
+            <button class="btn op" id="btn" onclick="tapped_btn('/')">/</button>
+
+            <button class="btn" id="btn" onclick="tapped_btn(7)">7</button>
+            <button class="btn" id="btn" onclick="tapped_btn(8)">8</button>
+            <button class="btn" id="btn" onclick="tapped_btn(9)">9</button>
+            <button class="btn op" id="btn" onclick="tapped_btn('*')">x</button>
+
+            <button class="btn" id="btn" onclick="tapped_btn(4)">4</button>
+            <button class="btn" id="btn" onclick="tapped_btn(5)">5</button>
+            <button class="btn" id="btn" onclick="tapped_btn(6)">6</button>
+            <button class="btn op" id="btn" onclick="tapped_btn('-')">-</button>
+
+            <button class="btn" id="btn" onclick="tapped_btn(1)">1</button>
+            <button class="btn" id="btn" onclick="tapped_btn(2)">2</button>
+            <button class="btn" id="btn" onclick="tapped_btn(3)">3</button>
+            <button class="btn op" id="btn" onclick="tapped_btn('+')">+</button>
+
+            <button class="btn zero" onclick="tapped_btn()">0</button>
+            <button class="btn" onclick="tapped_btn()">.</button>
+            <button class="btn equal" onclick="equal_btn()">=</button>
+        </div>
+        </div>
+
+    </div>
+
+<script src="script.js"></script>
+</body>
+</html>

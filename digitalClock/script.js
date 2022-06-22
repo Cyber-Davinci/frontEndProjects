@@ -34,10 +34,6 @@ function changeTheme(){
         document.querySelector("body").style.backgroundImage = "linear-gradient(62deg, #3a3d40 0%, #181719 100%)"
         icon.style.color = "#fff"
         document.getElementById("date").style.color = "#fff"
-
-
-
-
     }
 }
 
