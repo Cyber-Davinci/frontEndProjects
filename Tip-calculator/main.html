@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="shortcut icon" type="image/png" href="" />
+    <link rel="stylesheet" href="style.css">
+    <title>Cyber's | Tip Calculator</title>
+</head>
+<body>
+    <div class="container">
+        <div class="tip-container">
+            <h2>Tip Calculator</h2>
+            <br>
+
+            <label for="amount">Bill amount</label>
+            <br>
+            <div class="bt">
+                <button ><i class="fa-solid fa-dollar-sign"></i></button><input type="text" id="amount">
+            </div>
+            <!-- <button ><i class="fa-solid fa-dollar-sign"></i></button><input type="text" id="amount"> -->
+            <br>
+            <br>
+            <label for="guest">Number of guests</label>
+            <br>
+            <div class="bt">
+                <button ><i class="fa-solid fa-user"></i></button><input type="text" id="guest">
+            </div>
+            <!-- <button><i class="fa-solid fa-user"></i></button><input type="text" id="guest"> -->
+            <br>
+            <br>
+            <label for="quality">Service Quality</label>
+            <br>
+            <select name="" id="quality" class="quality">
+                <option disabled selected value="0">Rate Quality</option>
+                <option value="0.3">30% - outstanding</option>
+                <option value="0.2">20% - Better</option>
+                <option value="0.15">15% - Good</option>
+                <option value="0.1">10% - Not bad</option>
+                <option value="0.05">5% - very bad</option>
+            </select>
+            <br>
+            <br>
+            <div class="btn-cal">
+                <button class="btn" onclick="compute()">Calculate</button>
+            </div>
+        </div>
+        <div class="message" id="message-tip"></div>
+    </div>
+
+<script src="script.js"></script>
+</body>
+</html>
