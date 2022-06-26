@@ -35,11 +35,10 @@ function changeTheme(){
         document.querySelector(".equal").style.backgroundColor = "#2ec973";
         document.querySelector(".btn.c").style.backgroundColor = "#f8eced";
         document.querySelector(".btn.c").style.color = "#f65760";
-
-
-
+        document.querySelector("span").style.color = "#000"
 
     }
+
     else{
         icon.classList.remove("fa-toggle-on");
         icon.classList.add("fa-toggle-off");
@@ -50,7 +49,6 @@ function changeTheme(){
         document.querySelector(".equal").style.backgroundColor = "#2ec973";
         document.querySelector(".btn.c").style.backgroundColor = "#2d191e";
         document.querySelector(".btn.c").style.color = "#f65760";
-
-        // document.querySelector("body").style.backgroundImage = "linear-gradient(62deg, #3a3d40 0%, #181719 100%)"
+        document.querySelector("span").style.color = "#fff"
     }
 }
