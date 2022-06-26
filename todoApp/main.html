@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="shortcut icon" type="image/png" href="" />
+    <link rel="stylesheet" href="style.css">
+    <title>Cyber's | Todo App</title>
+</head>
+<body>
+    
+<div class="container">
+    <div id="message" class="message">
+        <p>The input field is empty!</p>
+    </div>
+    <div class="date-time"><h3 id="day">Wednesday</h3><p id="time">18:16</p></div>
+
+    <div class="heading"><h1>Your Todo</h1></div>
+    <div class="todo-input">
+        <input id="todo-input" type="text" placeholder="Add Todo Here...">
+        <span id="add-todo" onclick="addTodo()"><i class="fa-solid fa-angles-right"></i></span>
+    </div>
+    <div class="todo-containers">
+        <div class="remaining todo-container" id="newTodo">
+            <h3>New Todos</h3>
+            <!-- <div class="todo-items" id="todo-item" draggable="true">
+                <p>Complete this todo app</p>
+                <div class="progress"></div>
+            </div> -->
+        </div>
+        <div class="in-progress todo-container">
+            <h3>In Progress</h3>
+            <!-- <div class="todo-items" id="todo-item" draggable="true">
+                <p>Complete this todo app</p>
+                <div class="progress"></div>
+            </div> -->
+        </div>
+        <div class="completed todo-container">
+            <h3>Completed</h3>
+            <!-- <div class="todo-items" id="todo-item">
+                <p>Complete this todo app</p>
+                <div class="progress"></div>
+            </div> -->
+        </div>
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

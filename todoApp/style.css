@@ -1,0 +1,189 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family: "ubuntu";
+}
+
+.container{
+    width: 100%;
+}
+
+.heading{
+    text-align: center;
+    margin-bottom: 2rem;
+}
+.todo-input{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    /* width: 70%; */
+    text-align: center;
+}
+
+.todo-input input{
+    width: 70%;
+    outline: none;
+    height: 3rem;
+    border-radius: 17px;
+    border: none;
+    color: #fff;
+    /* border: 1px solid #2ec973; */
+    background-color: #222427;
+    padding: 1rem;
+    font-size: 1.5rem;
+
+}
+.todo-input span{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 3rem;
+    height: 3rem;
+    position: absolute;
+    border-radius: 0 1rem 1rem 0;
+    background-color: #2ec973;
+    color: #e9f0f4;
+    right: 15rem;
+    cursor: pointer;
+
+
+}
+.todo-input span i{
+    font-size: 2.5rem;
+}
+
+.todo-containers{
+    display: flex;
+    margin: auto auto;
+    /* flex-direction: column; */
+}
+
+.todo-container{
+    margin: 1rem auto;
+    min-height: 25rem;
+    height: auto;
+    width: 350px;
+    padding: 2rem;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+    border-radius: 28px;
+    background-color: #e9f0f4;
+
+}
+
+.todo-container.drag-over{
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+    border: .5px dashed #2ec973;
+    transition: .3s ease-in-out;
+}
+
+.todo-container h3{
+    text-align: center;
+}
+.date-time{
+    margin-top: 1rem;
+    margin-left: 1rem;
+    font-size: 1.5rem;
+}
+.date-time h3{
+    text-transform: uppercase;
+
+}
+
+.todo-items{
+    display: flex;
+    margin-top: 3rem;
+    position: relative;
+    border: .5px solid #fff;
+    border-radius: 14px;
+    padding: 1.5rem;
+}
+
+
+.todo-items .progress{
+    position: absolute;
+    right: 1rem;
+    margin-bottom: .8rem;
+    width: 1.5rem;
+    height: 1.5rem;
+    /* border: 1px solid; */
+    border-radius: 7px;
+    background-color: #fff;
+    cursor: pointer;
+
+}
+
+.in-progress .progress{
+    background-color: grey;
+    
+}
+
+.completed .progress{
+    background-color: #2ec973;
+}
+.message{
+    width: 300px;
+    min-width: 200px;
+    position: fixed;
+    top: 2rem;
+    left: 45%;
+    background-color: #2ec973;
+    color: #fff;
+    border-radius:7px ;
+    border: none;
+    padding: 2rem;
+    text-align: center;
+    visibility: hidden;
+}
+
+.message.show{
+    visibility: visible;
+    -webkit-animation: slidein .5s, slideout 1s 3.5s;
+    animation: slidein .5s, slideout 1s 3.5s;
+}
+
+@-webkit-keyframes slidein{
+    from{top: 0; opacity: 0;}
+    to{top: 2rem; opacity: 1;}
+}
+
+@keyframes slidein{
+    from{top: 0; opacity: 0;}
+    to{top: 2rem; opacity: 1;}
+}
+
+@-webkit-keyframes slideout{
+    from{top: 2rem; opacity: 1;}
+    to{top: 0; opacity: 0;}
+}
+@keyframes slideout{
+    from{top: 2rem; opacity: 1;}
+    to{top: 0; opacity: 0;}
+}
+
+@media(max-width:520px){
+    .todo-containers{
+        display: flex;
+        flex-direction: column;
+    }
+    .todo-input input{
+        width: 90%;
+    }
+    .todo-input span{
+        right: 1rem;
+    }
+    .date-time{
+        font-size: 1rem;
+    }
+    .message{
+        left: 7.5rem;
+        width: 240px;
+        padding: 1rem;
+        /* padding: 1.5rem; */
+    }
+}
