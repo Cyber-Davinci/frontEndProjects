@@ -8,21 +8,21 @@ userInput.addEventListener("keydown", (e)=>{
 
 
 const addItem = ()=>{
-    const groceItem = document.createElement("h2");
+    if(userInput.value != ""){
+        const groceItem = document.createElement("h2");
         groceItem.textContent = `- ${userInput.value}`
-    groceItem.addEventListener("click", ()=>{
-        // if(groceItem.style.textDecoration!="line-through"){
-        //     groceItem.style.textDecoration = "line-through";
-        // }
-        // else{
-        //     groceItem.style.textDecoration = "none";
-        // }
+    }
+    else{
+        document.getElementById("message").classList.add("show")
+    }
+    setTimeout(()=>{document.getElementById("message").classList.remove("show")}, 4000)
 
+
+    groceItem.addEventListener("click", ()=>{
         groceItem.style.textDecoration!="line-through" ? groceItem.style.textDecoration="line-through" : groceItem.style.textDecoration = "none";
     })
     document.getElementById("groce-items").appendChild(groceItem)
     userInput.value = ""
-    console.log(groceItem)
 }
 
 document.getElementById("clear-all").addEventListener("click", ()=>{

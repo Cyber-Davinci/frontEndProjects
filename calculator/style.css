@@ -44,6 +44,7 @@ body{
     
 }
 
+
 .result{
     float: right;
     mix-blend-mode: difference;
@@ -109,13 +110,13 @@ span{
     color: #fff;
     font-size: 2rem;
     cursor: pointer;
-    position: fixed;
+    position: absolute;
     top: 2rem;
     left: 40px;
 }
 
 
-@media(max-width:400px){
+@media(max-width:500px){
     .calculator{
         width: 350px;
         height: 700px;

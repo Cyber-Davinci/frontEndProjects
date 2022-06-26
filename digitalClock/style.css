@@ -68,9 +68,9 @@ i{
 }
 
 
-@media (max-width:590px){
+@media (max-width:500px){
     .date, .time{
-        width: 450px;
+        width: 360px;
         padding: 1.5rem;
     }
 }
